@@ -1,6 +1,5 @@
 /node_modules
 /public/hot
-/public/bower_components/
 /public/css
 /public/js
 /public/storage
@@ -13,9 +12,11 @@ Homestead.json
 Homestead.yaml
 npm-debug.log
 yarn-error.log
-/public/bower_components/
+/public/bower
 bower.json
 .bowerrc
 /public/fonts
 /public/images
 /public/vendor
+/public/img
+/public/assets
