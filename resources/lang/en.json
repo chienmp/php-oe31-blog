@@ -50,6 +50,7 @@
     "Like": "Like post",
     "unique": "Unique field",
     "email": "Email not in right form, check again",
-    "subcribe_submit": "Thank you, U will get email when we post new post"
+    "subcribe_submit": "Thank you, U will get email when we post new post",
+    "alpha_num": "Only numbers and letters allowed"
 }
 
