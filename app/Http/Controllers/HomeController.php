@@ -24,8 +24,8 @@ class HomeController extends Controller
      */
     public function index()
     {
-        $categories =Category::all();
-        $posts= Post::latest()->take(config('home.home'))->get();
+        $categories = Category::all();
+        $posts = Post::latest()->take(config('home.home'))->get();
 
         return view('home');
     }
