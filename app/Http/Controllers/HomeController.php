@@ -3,6 +3,7 @@
 namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
+use App\Models\Category;
 
 class HomeController extends Controller
 {
@@ -23,6 +24,9 @@ class HomeController extends Controller
      */
     public function index()
     {
+        $categories =Category::all();
+        $posts= Post::latest()->take(config('home.home'))->get();
+
         return view('home');
     }
 }

@@ -5,7 +5,7 @@
     @push('css')
         <link rel="stylesheet" href="{{ asset('vendor/datatables/dataTables.bootstrap4.css') }}">
     @endpush
-@endsection
+
 @section('content')
     <div class="container-fluid">
         <div class="block-header">
@@ -29,6 +29,7 @@
                                     </tr>
                                 </thead>
                                 <tbody>
+
                                     @foreach ($cates as $cate)
                                         <tr>
                                             <td>{{ $cate->name }}</td>

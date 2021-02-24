@@ -14,12 +14,29 @@ use Illuminate\Support\Facades\Route;
 |
 */
 Auth::routes();
-Route::get('/home', 'HomeController@index')->name('home');
+Route::get('posts','PostController@index')->name('post.index');
+Route::get('posts/fetch', 'PostController@fetch')->name('posts.fetch');
+Route::get('/search','SearchController@search')->name('search');
+Route::post('subcribe', 'SubcriberController@store')->name('subcriber.store');
+Route::get('/category/{id}', 'PostController@showPostByCate')->name('cate.posts');
+Route::get('tag/{id}', 'PostController@showPostByTag')->name('tag.posts');
+Route::group(['middleware'=>'auth'], function () {
+    Route::get('favorite/{id}/add', 'FavoriteController@add')->name('post.favorite');
+    Route::post('comments/{post}', 'CommentController@store')->name('comment.store');
+    Route::get('profile', 'ProfileController@index')->name('profile');
+    Route::post('update-profile', 'ProfileController@updateProfile')->name('profile.update');
+    Route::get('favorite', 'FavoriteController@favorPost')->name('favor');
+});
+Route::get('/post/{id}', 'PostController@details')->name('post');
+Route::get('/', 'HomeController@index')->name('home');
 Route::get('lang/{lang}', 'LangController@changeLanguage')->name('lang');
 Route::group(['prefix' => 'admin', 'namespace'=>'Admin', 'middleware'=>'admin'], function () {
     Route::get('dashboard', 'DashboardController@index')->name('dashboard');
     Route::resource('tags', 'TagController');
     Route::resource('categories', 'CategoryController');
     Route::resource('posts', 'PostController');
+    Route::resource('subcribers', 'SubcriberController');
+    Route::get('profile', 'ProfileController@index')->name('admin.profile');
+    Route::post('profile-update', 'ProfileController@updateProfile')->name('profile.update');
 });
 

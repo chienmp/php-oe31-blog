@@ -17,7 +17,7 @@
             <div class="swiper-slide">
                 <a class="slider-category" href="#">
                     <div class="blog-image">
-                        <img width="333px" height="450px" src="{{ asset('storage/category/' . $category->image) }}"
+                        <img width="333px" height="450px" src="{{ asset('storage/image/' . $category->image) }}"
                             alt="{{ $category->name }}">
                     </div>
                     <div class="category">
@@ -59,7 +59,7 @@
                             <ul class="post-footer">
                                 <li>
                                     <a href="{{ route('login') }}"><i class="ion-heart"></i>
-                                        {{ $post->favorite_to_users->count() }}
+                                        {{ $post->usersFavorite->count() }}
                                     </a>
                                 </li>
                                 <li>
@@ -73,7 +73,7 @@
                             <ul class="post-footer">
                                 <li>
                                     <a href="{{ route('post', $post->id) }}"><i class="ion-heart"></i>
-                                        {{ $post->favorite_to_users->count() }}
+                                        {{ $post->usersFavorite->count() }}
                                     </a>
                                 </li>
                                 <li>
@@ -104,7 +104,7 @@
             @endforelse
 
         </div><!-- row -->
-        <a class="load-more-btn" href="#"><b>{{ trans('load_more') }}</b></a>
+        <a class="load-more-btn" href="{{ route('post.index') }}"><b>{{ trans('load_more') }}</b></a>
     </div><!-- container -->
 </section><!-- section -->
 @endsection

@@ -24,9 +24,11 @@
             @else
                 @if (Auth::user()->role->id == config('role.roleadmin'))
                     <li><a href="{{ route('dashboard') }}">{{ trans('Dashboard') }}</a></li>
+                    <li><a href="{{ route('favor') }}">{{ trans('Favor') }}</a></li>
                 @endif
                 @if (Auth::user()->role->id == config('role.roleuser'))
                     <li><a href="{{ route('about') }}">{{ trans('Profile') }}</a></li>
+                    <li><a href="{{ route('favor') }}">{{ trans('Favor') }}</a></li>
                 @endif
             @endguest
 

@@ -5,7 +5,7 @@
     @push('css')
 
     @endpush
-@endsection
+
 @section('content')
     <div class="container-fluid">
         <!-- Vertical Layout | With Floating Label -->

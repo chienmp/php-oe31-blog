@@ -27,6 +27,9 @@
             <div id="content">
         <!-- Topbar -->
         @include('layouts.backend.topbar')
+        <div class="container-fluid">
+            @yield('content')
+        </div>
         <!-- End Topbar -->
             </div>
         </div>

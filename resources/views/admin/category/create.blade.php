@@ -5,7 +5,7 @@
     @push('css')
 
     @endpush
-@endsection
+
     <script src="{{ asset('js/loadimage.js') }}"></script>
 @section('content')
     <div class="container-fluid">
