@@ -1,5 +1,4 @@
 {
-    {
         "Login": "Login",
         "Register": "Register",
         "Logout": "Logout",
@@ -66,5 +65,5 @@
         "deleted": "Deleted successfully",
         "select_cate": "Select Category",
         "select_tags": "Select Tags"
-    }
 }
+
